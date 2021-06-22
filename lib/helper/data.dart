@@ -2,8 +2,8 @@ import 'package:flutternews/models/categrie_model.dart';
 
 List<CategoryModel> getCategories() {
   // ignore: deprecated_member_use
-  List<CategoryModel> category = new List<CategoryModel>();
   CategoryModel categoryModel = new CategoryModel();
+  List<CategoryModel> category = new List.generate(0, (_) => categoryModel);
 
   //1
   categoryModel.categoryName = "Business";
