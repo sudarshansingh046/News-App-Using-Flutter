@@ -1,4 +1,4 @@
 class CategoryModel {
-  String categoryName;
-  String imageUrl;
+  String categoryName = '';
+  String imageUrl = '';
 }
