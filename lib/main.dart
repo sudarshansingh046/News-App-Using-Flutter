@@ -1,7 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternews/views/home.dart';
+// Sets a platform override for desktop to avoid exceptions. See
+// https://flutter.dev/desktop#target-platform-override for more info.
 
 void main() {
+  debugDefaultTargetPlatformOverride = TargetPlatform.windows;
   runApp(MyApp());
 }
 
