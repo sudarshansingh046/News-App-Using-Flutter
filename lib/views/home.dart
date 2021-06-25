@@ -35,19 +35,19 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text("Khabar"),
-            Text(
-              "Brief",
-              style: TextStyle(color: Colors.blue),
-            )
-          ],
-        ),
-        elevation: 0.0,
-      ),
+      // appBar: AppBar(
+      //   title: Row(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: <Widget>[
+      //       Text("Khabar"),
+      //       Text(
+      //         "Brief",
+      //         style: TextStyle(color: Colors.blue),
+      //       )
+      //     ],
+      //   ),
+      //   elevation: 0.0,
+      // ),
       body: _loading
           ? Center(
               child: Container(
