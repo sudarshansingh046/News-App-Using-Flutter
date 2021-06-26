@@ -54,6 +54,7 @@ class _MyApp1State extends State<MyApp1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -117,6 +117,7 @@ class CategoryTile extends StatelessWidget {
                     )));
       },
       child: Container(
+        
         margin: EdgeInsets.only(right: 14),
         child: Stack(
           children: <Widget>[
