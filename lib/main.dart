@@ -76,15 +76,15 @@ class _MyApp1State extends State<MyApp1> {
               height: 60,
             ),
             Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text("Khabar"),
-            Text(
-              "Brief",
-              style: TextStyle(color: Colors.blue),
-            )
-          ],
-        ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("Khabar"),
+                Text(
+                  "Brief",
+                  style: TextStyle(color: Colors.blue),
+                )
+              ],
+            ),
             _loading
                 ? Center(
                     child: Container(
