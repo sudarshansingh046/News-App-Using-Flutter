@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutternews/views/home.dart';
 import 'package:flutternews/helper/news.dart';
+// ignore: duplicate_import
 import 'package:flutternews/views/home.dart';
 import 'package:flutternews/views/category_news.dart';
 import 'package:flutternews/models/categrie_model.dart';
 import 'package:flutternews/helper/data.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'Khabar Brief',
+      //title: 'Khabar Brief',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.white,
@@ -75,16 +76,18 @@ class _MyApp1State extends State<MyApp1> {
             SizedBox(
               height: 60,
             ),
-            Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text("Khabar"),
-            Text(
-              "Brief",
-              style: TextStyle(color: Colors.blue),
-            )
-          ],
-        ),
+            Container(
+              margin: EdgeInsets.all(24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "KhabarBrief News",
+                    style: TextStyle(fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
+            ),
             _loading
                 ? Center(
                     child: Container(
@@ -99,14 +102,14 @@ class _MyApp1State extends State<MyApp1> {
                           /// Categories
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 16),
-                            height: 800,
+                            height: 500,
                             child: ListView.builder(
                                 itemCount: categories.length,
                                 // shrinkWrap: true,
                                 scrollDirection: Axis.vertical,
                                 itemBuilder: (context, index) {
                                   return CategoryTile(
-                                    imageUrl: categories[index].imageUrl,
+                                    //imageUrl: categories[index].imageUrl,
                                     categoryName:
                                         categories[index].categoryName,
                                   );
@@ -125,8 +128,8 @@ class _MyApp1State extends State<MyApp1> {
 }
 
 class CategoryTile extends StatelessWidget {
-  final String imageUrl, categoryName;
-  CategoryTile({required this.imageUrl, required this.categoryName});
+  final String categoryName;
+  CategoryTile({required this.categoryName});
 
   @override
   Widget build(BuildContext context) {
@@ -140,29 +143,19 @@ class CategoryTile extends StatelessWidget {
                     )));
       },
       child: Container(
-        margin: EdgeInsets.only(right: 14),
+        margin: EdgeInsets.only(top: 14),
+        //margin: EdgeInsets.only(right: 14),
+
         child: Stack(
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: CachedNetworkImage(
-                imageUrl: imageUrl,
-                width: 300,
-                height: 100,
-                fit: BoxFit.cover,
-              ),
-            ),
             Container(
-              alignment: Alignment.center,
-              height: 100,
+              height: 50,
               width: 300,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.black26),
+              decoration: BoxDecoration(color: Colors.white24),
               child: Text(
                 categoryName,
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 14,
                     fontWeight: FontWeight.w500),
               ),

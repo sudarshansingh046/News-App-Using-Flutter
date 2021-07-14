@@ -1,3 +1,4 @@
+//import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternews/helper/news.dart';
 import 'package:flutternews/models/article_model.dart';
@@ -38,7 +39,7 @@ class _CategoryNewsState extends State<CategoryNews> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Khabar"),
+            Text('Khabar'),
             Text(
               "Brief",
               style: TextStyle(color: Colors.blue),
