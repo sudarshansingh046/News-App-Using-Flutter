@@ -9,7 +9,7 @@ class News {
   // ignore: non_constant_identifier_names
   Future<void> getNews() async {
     String url =
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=ffd87d4d604f431793a1cb059e902dcd";
+        "https://newsapi.org/v2/top-headlines?country=in&apiKey=ffd87d4d604f431793a1cb059e902dcd";
     var response = await http.get(Uri.parse(url));
     var jsonData = jsonDecode(response.body);
 
@@ -39,7 +39,7 @@ class CategoryNewsClass {
   // ignore: non_constant_identifier_names
   Future<void> getNews(String category) async {
     String url =
-        "https://newsapi.org/v2/top-headlines?country=us&category=$category&apiKey=ffd87d4d604f431793a1cb059e902dcd";
+        "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=ffd87d4d604f431793a1cb059e902dcd";
     var response = await http.get(Uri.parse(url));
     var jsonData = jsonDecode(response.body);
 

@@ -6,6 +6,7 @@ import 'package:flutternews/models/categrie_model.dart';
 import 'package:flutternews/views/article_view.dart';
 import 'package:flutternews/views/category_news.dart';
 
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -35,19 +36,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Row(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: <Widget>[
-      //       Text("Khabar"),
-      //       Text(
-      //         "Brief",
-      //         style: TextStyle(color: Colors.blue),
-      //       )
-      //     ],
-      //   ),
-      //   elevation: 0.0,
-      // ),
+      //drawer: AppDrawer(),
       body: _loading
           ? Center(
               child: Container(
@@ -117,7 +106,6 @@ class CategoryTile extends StatelessWidget {
                     )));
       },
       child: Container(
-        
         margin: EdgeInsets.only(right: 14),
         child: Stack(
           children: <Widget>[
