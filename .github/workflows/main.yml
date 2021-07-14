@@ -15,8 +15,6 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '2.x'
-    - run: flutter clean
-    - run: flutter upgrade
     - run: flutter pub get
     - run: flutter build apk -t lib/main.dart --split-per-abi
     - name: Create a Release APK
