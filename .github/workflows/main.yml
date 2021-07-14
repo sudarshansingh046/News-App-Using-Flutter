@@ -23,4 +23,3 @@ jobs:
         artifacts: "build/app/outputs/apk/release/*.apk"
         token: ${{ secrets.TOKEN }}
         commit: master
-        tag: v1.2
