@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutternews/views/home.dart';
 import 'package:flutternews/helper/news.dart';
-// ignore: duplicate_import
-import 'package:flutternews/views/home.dart';
 import 'package:flutternews/views/category_news.dart';
 import 'package:flutternews/models/categrie_model.dart';
 import 'package:flutternews/helper/data.dart';
