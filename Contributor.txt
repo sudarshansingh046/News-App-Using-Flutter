@@ -1,3 +1,0 @@
-Amit 
-sudarshan singh
-this is flutter project.
